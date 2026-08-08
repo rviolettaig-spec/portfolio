@@ -1,0 +1,841 @@
+/* CSS Reset */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset для старых браузеров */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+/* Базовые настройки документа - убирают границы */
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden; /* На всякий случай, если что-то вылезает */
+}
+
+/* Дополнительные сбросы */
+ol, ul {
+    list-style: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Изображения */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.header_logo {
+    color:#0c397d;
+    font-size: 36px;
+    font-family: Revalia;
+}
+
+.intro_title {
+    color:#000000;
+    font-size: 48px;
+    font-weight: 500;
+    font-family: Roboto;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+header {
+    background-color: #EEEFF1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.header_wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 25px;
+}
+
+.header_logo {
+    cursor: pointer;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 120px;
+    width: 50px;
+    position: relative;
+}
+
+.header_logo:before {
+    content: "";
+    top: 0;
+    left: -17px;
+    border-radius: 5px;
+    background-color: #0c397d;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    animation: updown 1.5s infinite;
+    transition: 500ms;
+}
+
+.header_logo:hover::before {
+    top: 0;
+    left: 0;
+    width: 90px;
+    height: 100%;
+    animation: none;
+    opacity: 0.6;
+    z-index: -1;
+}
+
+@keyframes updown {
+    0% {
+        top: 0;
+    }
+
+    50% {
+        top: 50px;
+    }
+
+    100% {
+        top: 0;
+    }
+}
+
+body {
+    background-color: #EEEFF1;
+}
+
+.header_menu {
+    font-family: Roboto;
+    display: flex; /* Для расположения по горизонтали */
+    align-items: center; /* Для выравнивания пунктов меню */
+    cursor: pointer;
+    
+}
+
+.menu_item {
+    padding-left: 42px;
+    text-decoration: none;
+    color: inherit;
+    white-space: nowrap; /* Чтобы текст не переносился */
+}
+
+.intro {
+    padding-top: 160px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.intro_left {
+    width: 357px;
+    margin-left: 70px;
+    padding-top: 100px;
+
+}
+
+.intro_right {
+    width: 550px;
+    margin-left: 100px;
+    padding-top: 60px;
+    margin-bottom: 200px;
+
+}
+
+.intro_text {
+    color:#3e3e3e;
+    font-size: 16px;
+    font-weight: 300;
+    font-family: Roboto;
+    line-height: 23px;
+}
+
+.intro_button:hover {
+    border-radius: 50px;
+}
+
+.about_me {
+    background: white;
+}
+
+.wrapper {
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+.about_wrapper {
+    display: flex;
+    justify-content: center;
+
+}
+
+.about_block {
+    width: 540px;
+    text-align: center;
+
+}
+
+.about_title {
+    font-family: Roboto;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 37px;
+    text-align: center;
+    color: #000000;
+    margin-top: 119px;
+    margin-bottom: 30px;
+}
+
+.about_text {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 23px;
+    text-align: center;
+    color: #3e3e3e;
+    margin-bottom: 100px;
+}
+
+.my_projects {
+    background: #34547A;
+}
+
+.my_projects_wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.my_projects_block {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    width: 100%;
+    margin-left: 170px;
+}
+
+.project_img {
+    width: 141px;
+    height: 50px;
+
+}
+
+.skills {
+    background: #FFFFFF;
+}
+
+.skills_wrapper {
+    justify-self: center;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.skills_left {
+    width: 445px;
+    margin-right: 150px;
+}
+
+.skills_img {
+    padding-top: 102px;
+    padding-bottom: 101px;
+
+}
+
+.skills_title {
+    margin-top: 204px;
+    margin-bottom: 50px;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 37px;
+    font-family: Roboto;
+    color:#000000;
+}
+
+.skill {
+    font-family: Roboto;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+    color:#727272;
+    margin-bottom: 24px;
+}
+
+.skill1 {
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.skill1::before {
+    content: " ";
+    width: 445px;
+    height: 4px;
+    background-color: #C4C4C4;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.skill1::after {
+    content: " ";
+    width: 330px;
+    height: 4px;
+    background-color: #34574A;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.skill2 {
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.skill2::before {
+    content: " ";
+    width: 445px;
+    height: 4px;
+    background-color: #C4C4C4;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.skill2::after {
+    content: " ";
+    width: 330px;
+    height: 4px;
+    background-color: #34574A;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.skill3 {
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.skill3::before {
+    content: " ";
+    width: 445px;
+    height: 4px;
+    background-color: #C4C4C4;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.skill3::after {
+    content: " ";
+    width: 330px;
+    height: 4px;
+    background-color: #34574A;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.skills_img {
+    width: 450px;
+}
+
+.process_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.process_block {
+    width: 540px;
+    text-align: center;
+}
+
+.process_title {
+    font-family: Roboto;
+    font-size: 32px;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 37px;
+    text-align: center;
+    color: #000000;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.process_text {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 26px;
+    text-align: center;
+    color: #727272;
+    margin-bottom: 57px;
+}
+
+.process_video {
+    width: 1100px;
+    margin-bottom: 100px;
+}
+
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery_img {
+    width: 100%;
+}
+
+.gallery_str {
+    width: 100%;
+    display: flex;
+}
+
+.lightzoom {
+    width: 25%;
+}
+
+.send_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.send_title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 37px;
+    text-align: center;
+    color:#000000;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.send_text {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    color:#727272;
+    margin-bottom: 65px;
+    width: 540px;
+}
+
+
+
+.send_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formstyle {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 23px;
+    color: #5F5D5D;
+    border: 0;
+    padding: 17px 20px;
+
+}
+
+.form1 {
+    width: 255px;
+    height: 50px;
+    margin-right: 30px;
+    margin-bottom: 20px;
+}
+
+.form2 {
+    width: 255px;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.form3 {
+    width: 545px;
+    height: 175px;
+    resize: none;
+    margin-bottom: 50px;
+}
+
+.send_button {
+    cursor: pointer;
+    width: 190px;
+    height: 55px;
+    border: 0;
+    background-color: #34547A;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.15em;
+    color: #ffffff;
+    padding: 20px 19px;
+    margin-bottom: 100px;
+}
+
+
+.intro_button {
+    cursor: pointer;
+    width: 260px;
+    height: 65px;
+    border: 0;
+    background-color: #34547A; 
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color:#EEEFF1;
+    margin-top: 35px;
+    transition: 500ms;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 10;
+}
+
+.modal_content {
+    margin: 7% auto;
+    width: 70%;
+    padding: 20px;
+    background-color: #EEEFF1;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 2s;
+}
+
+.close {
+    cursor: pointer;
+    font-family: Revalia;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 60px;
+    color: #34547A;
+    float: right;
+
+}
+
+.modal_title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 37px;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 35px;
+    margin-top: 35px;
+}
+
+footer {
+    background-color: #34547A;
+}
+
+.footer_wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 25px;
+}
+
+.footer_title {
+    font-family: Roboto;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 21px;
+	line-height: 25px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+	color: #FFFFFF;
+
+}
+
+.footer_text {
+    font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 13px;
+	line-height: 21px;
+    margin-bottom: 50px;
+	color: #FFFFFF;
+}
+
+.footer_img {
+    width: 43px;
+    height: 40px;
+    margin-top: 56px;
+    margin-bottom: 55px;
+    margin-left: 22px;
+}
+
+
+/* чтобы меню не перекрывало заголовки разделов */ 
+section {
+    scroll-margin-top: 100px; 
+}
+
+
+.clients {
+    background: #ffffff;
+}
+
+.clients_wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.clients_block {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    margin-left: 10px;
+}
+
+.clients_img {
+    width: 200px;
+    margin-left: 30px;
+}
+
+.menu_image {
+    display: none;
+}
+
+@media (max-width: 576px) {
+    .header_logo {
+        margin-top: 25px;
+        width: auto;
+        margin-left: 30px;
+    }
+
+    .header_wrapper {
+        padding: unset;
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+
+        height: 60px;
+    }
+
+    .header_menu {
+        width: 100%;
+        height: calc(100vh - 60px);
+        display: none;
+
+        position: absolute; /* 2. Абсолютное позиционирование */
+        top: 60px; /* 3. Начинается под шапкой (height шапки) */
+        background-color: #EEEFF1;
+        justify-content: center;
+    }
+
+    .header_menu a {
+        font-size: 20px;
+        display: block;
+        margin-left: unset;
+        text-align: center;
+        padding: 10px 20px;
+    }
+
+    .menu_image {
+        display: block;
+        width: 40px;
+        height: 40px;
+        align-self: flex-start;
+    }
+
+    .menu_img {
+        width: 100%;
+        height: auto;
+    }
+
+    .intro {
+        text-align: center;
+        padding-top: 150px;
+    }
+
+    .intro_left {
+        display: none;
+    }
+
+    .intro_title {
+        font-size: 40px;
+    }
+
+    .intro_right {
+        max-width: 100%;
+        margin-left: unset;
+        margin-bottom: unset;
+        padding: 10px 20px 30px;
+    }
+
+    .about {
+        width: 100%;
+        padding: 10px 20px;
+    }
+
+    .about_text {
+        padding: 0 10px; /* Отступы для текста */
+        line-height: 1.6; /* Улучшим читаемость */
+    }
+
+    .projects_block {
+        text-align: center;
+    }
+
+    .project_img {
+        margin-bottom: 10px;
+    }
+
+    .skills {
+    padding: 10px 20px;
+    }
+
+    .skills_title {
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    .skills_left, .skills_right {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    /* Уменьшаем ширину полосок навыков для мобильных */
+    .skill1::before, .skill2::before, 
+    .skill3::before {
+        width: 100%; /* Занимают всю ширину контейнера */
+        max-width: 100%; /* Не выходят за границы */
+    }
+
+    /* Уменьшаем ширину полосок навыков для мобильных */
+    .skill1::after,
+    .skill2::after,
+    .skill3::after {
+        width: 70%; /* Занимают всю ширину контейнера */
+        max-width: 100%; /* Не выходят за границы */
+    }
+    
+
+    .skills_img {
+        width: 100%;
+        height: auto;
+    }
+
+    .process_block {
+        width: 100%;
+        padding: 10px 20px;
+    }
+
+    /* Стили для видео */
+    .process_video {
+        width: 100%; /* Занимает всю ширину контейнера */
+        max-width: 100%; /* Не выходит за границы */
+        height: auto; /* Автоматическая высота */
+        padding: 0 20px; /* Отступы по бокам */
+        margin-bottom: 50px; /* Отступ снизу */
+    }
+
+    .send_form, .form1, .form2, .form3, .send_title, .send_text {
+        width: 100%;
+        padding: 10px 20px;
+        margin-right: unset;
+    }
+
+    .modal_content {
+    width: 100%;
+    height: 100vh;
+    margin: unset;
+}
+
+    .close {
+        float: unset;
+        position: absolute;
+        top: 20px;
+        right: 10px;
+    }
+
+    footer {
+        position: relative !important;
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        background-color: #34547A !important;
+        width: 100% !important;
+        z-index: 1 !important; /* Важно: чтобы был поверх других элементов */
+        padding: 70px 0 !important; /* Добавьте padding */
+        margin-top: 70px !important; 
+    }
+    
+    .footer_wrapper {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        padding: 20px 15px !important;
+        text-align: center !important;
+    }
+    
+    .left_footer {
+        width: 100% !important;
+        margin-bottom: 20px !important;
+    }
+    
+    .footer_title {
+        font-size: 18px !important;
+        margin: 10px 0 !important;
+        color: white !important;
+    }
+    
+    .footer_text {
+        font-size: 14px !important;
+        margin: 10px 0 !important;
+        color: white !important;
+    }
+    
+    .right_footer {
+        display: flex !important;
+        justify-content: center !important;
+        width: 100% !important;
+    }
+    
+    .footer_img {
+        margin-left: 15px !important;
+        margin-right: 15px !important;
+        width: 35px !important;
+        height: 35px !important;
+        filter: brightness(0) invert(1); /* Чтобы иконки были белыми */
+    }
+
+}

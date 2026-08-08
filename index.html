@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Revalia&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <script src="jquery-3.5.1.min.js"></script>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    </head>
+
+    <body>
+        <header>
+            <div class="wrapper">
+                <div class="header_wrapper">
+                    <div class="header_logo">
+                        <h1 id="headerLogo">CodeTutor</h1>
+                    </div>
+
+                    <div class="menu_image" id="menuTrigger">
+                        <img src="menu-icon.png" alt="" class="menu_img">
+                    </div>
+
+                    <div class="header_menu" id="headerMenu">
+                        <a href="#intro" class="menu_item">ГЛАВНАЯ</a> 
+                        <a href="#about" class="menu_item">ОБО МНЕ</a>
+                        <a href="#my_works" class="menu_item">РАБОТЫ</a>
+                        <a href="#process" class="menu_item">МЕТОДИКА</a>
+                        <a href="#contacts" class="menu_item">КОНТАКТЫ</a>
+                    </div>
+                </div>
+            </div>
+
+        </header>
+
+        <main>
+            <section class="intro" id="intro">
+                <div class="intro_left">
+                    <img class="intro_img" src="intro_logo.svg" alt="INTRO">
+                </div>
+
+                <div class="intro_right">
+                    <h1 class="intro_title" id="myTitle">
+                        Преподаватель программирования
+                    </h1>
+                    <p class="intro_text">
+                        Обучаю программированию с нуля до профессионального уровня. 
+                        Индивидуальный подход к каждому ученику, практические проекты и подготовка к карьере в IT-индустрии.
+                    </p>
+                    <button class="intro_button" id="myBtn">ЗАПИСАТЬСЯ НА УРОК</button>
+                    <div class="modal" id="myModal">
+                        <div id="myContent" class="modal_content" id="cont">
+                            <div class="close" id="myClose">&times;</div>
+                            <div class="send_wrapper">
+                                <h1 class="modal_title">Запись на занятие</h1>
+                                <form action="send_mail.php" method="POST">
+                                    <div class="send_form">
+                                        <div>
+                                            <input name="form1" type="text" class="form1 formstyle" placeholder="Ваше имя">
+                                            <input name="form2" type="email" class="form2 formstyle" placeholder="Ваш email">
+                                        </div>
+
+                                        <div>
+                                            <textarea name="form3" class="form3 formstyle" id="" colls="30" rows="10" placeholder="Сообщение"></textarea>
+                                        </div>
+
+                                        <button class="send_button">ОТПРАВИТЬ</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </section>
+
+            <section class="about_me" id="about">
+                <div class="wrapper">
+                    <div class="about_wrapper">
+                        <div class="about_block">
+                            <h2 class="about_title" >Обо мне</h2>
+                            <p class="about_text">
+                                Программист по образованию. Разрабатываю сайты и приложения, владею Python, HTML, CSS и JavaScript. Имею опыт в графическом и веб-дизайне. 
+                                Преподаю программирование уже 3 года. Помогаю ученикам развивать технические навыки и видеть в программировании творческий процесс.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="my_projects" id="my_works">
+                <div class="wrapper">
+                    <div class="my_projects_wrapper">
+                        <div class="my_projects_block">
+                            <img src="numbers_item.svg" alt="num" class="project_img">
+                            <img src="numbers_item.svg" alt="num" class="project_img">
+                            <img src="numbers_item.svg" alt="num" class="project_img">
+                            <img src="numbers_item.svg" alt="num" class="project_img">
+                            <img src="numbers_item.svg" alt="num" class="project_img">
+                            <img src="numbers_item.svg" alt="num" class="project_img">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="skills">
+                <div class="wrappper">
+                    <div class="skills_wrapper">
+                        <div class="skills_left">
+                            <h3 class="skills_title">Мои навыки</h3>
+                            <h4 class="skill skill1">Веб-разработка</h4>
+                            <h4 class="skill skill2">Разработка игр</h4>
+                            <h4 class="skill skill3">Дизайн</h4>
+
+                        </div>
+
+                        <div class="skills_right">
+                            <img src="my_photo.webp" alt="Photo" class="skills_img">
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class = "process" id="process">
+                <div class="wrapper">
+                    <div class="process_wrapper">
+                        <div class="process_block">
+                            <h1 class="process_title">Методика обучения</h1>
+                            <p class="process_text">
+                                1. Теория через практику - изучаем концепции на реальных задачах<br>
+                                2. Индивидуальный план - программа подстраивается под ваши цели<br>
+                                3. Code Review - разбор вашего кода и рекомендации по улучшению<br>
+                                4. Проектный подход - от простых скриптов до сложных приложений</p>
+                        </div>
+                        <video src="video.mp4" class="process_video" controls="controls"></video>
+                    </div>
+                </div>
+
+            </section>
+
+            <section>
+                <div class="gallery">
+                    <div class="gallery_str">
+                        <a href="gallery1.png" class="lightzoom">
+                            <img src="gallery1.png" alt="Картинка1" class="gallery_img">
+
+                        </a>
+
+                        <a href="gallery2.png" class="lightzoom">
+                            <img src="gallery2.png" alt="Картинка2" class="gallery_img">
+
+                        </a>
+
+                        <a href="gallery1.png" class="lightzoom">
+                            <img src="gallery1.png" alt="Картинка1" class="gallery_img">
+
+                        </a>
+
+                        <a href="gallery2.png" class="lightzoom">
+                            <img src="gallery2.png" alt="Картинка2" class="gallery_img">
+
+                        </a>
+                
+                    </div>
+                    <div class="gallery_str">
+                        <a href="gallery1.png" class="lightzoom">
+                            <img src="gallery1.png" alt="Картинка1" class="gallery_img">
+
+                        </a>
+
+                        <a href="gallery2.png" class="lightzoom">
+                            <img src="gallery2.png" alt="Картинка2" class="gallery_img">
+
+                        </a>
+
+                        <a href="gallery1.png" class="lightzoom">
+                            <img src="gallery1.png" alt="Картинка1" class="gallery_img">
+
+                        </a>
+
+                        <a href="gallery2.png" class="lightzoom">
+                            <img src="gallery2.png" alt="Картинка2" class="gallery_img">
+
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="clients">
+                <div class="wrapper">
+                    <div class="clients_wrapper">
+                        <div class="clients_block">
+                            <img src="clients.jpg" alt="num" class="clients_img">
+                            <img src="clients.jpg" alt="num" class="clients_img">
+                            <img src="clients.jpg" alt="num" class="clients_img">
+                            <img src="clients.jpg" alt="num" class="clients_img">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="send">
+                <div class="wrapper">
+                    <div class="send_wrapper">
+                        <h1 class="send_title">Хотите записаться на занятие?</h1>
+                        <p class="send_text">
+                            Запишитесь на пробный урок. Определим ваш уровень, обсудим цели и составим индивидуальный план обучения.
+                        </p>
+                        
+                        <form action="send_mail.php" method="POST">
+                            <div class="send_form">
+                                <div>
+                                    <input name="form1" type="text" class="form1 formstyle" placeholder="Ваше имя">
+                                    <input name="form2" type="email" class="form2 formstyle" placeholder="Ваш email">
+                                </div>
+
+                                <div>
+                                    <textarea name="form3" class="form3 formstyle" id="" colls="30" rows="10" placeholder="Сообщение"></textarea>
+                                </div>
+                                <button class="send_button">ОТПРАВИТЬ</button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer>
+            <div class="wrapper" id="contacts">
+                <div class="footer_wrapper">
+                    <div class="left_footer">
+                        <h3 class="footer_title">Рыженко Виолетта</h3>
+                        <p class="footer_text">(с)2025. Все права защищены.</p>
+                    </div>
+                    <div class="right_footer">
+                        <img src="vk-logo.png" alt="VK" class="footer_img">
+                        <img src="vk-logo.png" alt="VK" class="footer_img">
+                        <img src="vk-logo.png" alt="VK" class="footer_img">
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        
+        <link rel="stylesheet" href="style1.css" type="text/css">
+        <script type="text/javascript" src="lightzoom.js"></script>
+        <script type="text/javascript">jQuery('.lightzoom').lightzoom({speed: 400, viewTitle: true, isOverlayClickClosing: true});</script>
+        <script src="myscript.js"></script>
+    </body>
+
+
+</html>
